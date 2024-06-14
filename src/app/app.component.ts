@@ -1,13 +1,28 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+
+
+// @Component({
+//   selector: 'app-user',
+//   template: `
+//     Username: {{ username }}
+//   `,
+//   standalone: true,
+// })
+// export class UserComponent {
+//   username = CoursesComponents
+// }
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
+  imports: [ RouterOutlet, RouterLink,CommonModule],
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'tutorial';
+  title = 'Porfolio';
 }
